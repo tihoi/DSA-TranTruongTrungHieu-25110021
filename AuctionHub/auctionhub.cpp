@@ -150,7 +150,7 @@ void quickSortWrapper(vector<Bid>& v) {
 }
 //Generate random datas (Use LLM to create this function)
 void generateRandomBids() {
-    ofstream file("test_data/large.txt");
+    ofstream file("D:/AuctionHub/test_data/large.txt");
     if (!file.is_open()) {
         cout << "Error opening file!\n";
         return;
@@ -176,7 +176,7 @@ void generateRandomBids() {
 // ---------- Driver ----------
 int main(int argc, char* argv[]) {
     vector<Bid> smallData;
-	if (!loadBids("test_data/small.txt", smallData)) {
+	if (!loadBids("D:/AuctionHub/test_data/small.txt", smallData)) {
 		cout << "Failed to load small.txt\n";
 		return 1;
 	}
@@ -209,7 +209,7 @@ int main(int argc, char* argv[]) {
     cout << "Task E: Quick Sort\n";
     generateRandomBids();
     vector<Bid> bids;
-    loadBids("test_data/large.txt", bids);
+    loadBids("D:/AuctionHub/test_data/large.txt", bids);
     quickSortWrapper(bids);
     cout << "After sorting:\n";
     printBids(bids, 5);
